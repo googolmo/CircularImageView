@@ -13,10 +13,12 @@ android {
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -29,10 +31,20 @@ android {
 
     }
 
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(KEY_STORE)
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
 }
-
-
-
 
 dependencies {
     compile project(':CircularImageView')
@@ -40,5 +52,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.okio:okio:1.0.0'
+
 }
 

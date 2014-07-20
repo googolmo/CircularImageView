@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.pkmmte.circularimageview.CircularImageView;
+import im.amomo.circularimageview.CircularImageView;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends Activity

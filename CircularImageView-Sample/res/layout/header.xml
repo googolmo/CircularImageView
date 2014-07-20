@@ -16,7 +16,7 @@
         android:textSize="24sp"
         android:visibility="invisible" />
 
-    <com.pkmmte.circularimageview.CircularImageView
+    <im.amomo.circularimageview.CircularImageView
         android:id="@+id/imgDoge"
         android:layout_width="196dp"
         android:layout_height="196dp"

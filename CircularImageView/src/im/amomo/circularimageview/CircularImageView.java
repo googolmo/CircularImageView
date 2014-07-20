@@ -1,4 +1,4 @@
-package com.pkmmte.circularimageview;
+package im.amomo.circularimageview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,6 +17,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
+
+import im.amomo.circularimageview.R;
 
 public class CircularImageView extends ImageView
 {
