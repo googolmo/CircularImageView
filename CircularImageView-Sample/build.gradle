@@ -11,6 +11,15 @@ android {
         versionName project.VERSION_NAME
     }
 
+    signingConfigs {
+        release {
+            storeFile file(KEY_STORE)
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
     buildTypes {
         release {
             signingConfig signingConfigs.release
@@ -35,14 +44,7 @@ android {
         disable 'InvalidPackage'
     }
 
-    signingConfigs {
-        release {
-            storeFile file(KEY_STORE)
-            storePassword STORE_PASSWORD
-            keyAlias KEY_ALIAS
-            keyPassword KEY_PASSWORD
-        }
-    }
+
 
 }
 
